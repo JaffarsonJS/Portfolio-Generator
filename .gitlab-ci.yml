@@ -1,0 +1,12 @@
+stages:
+  - build
+
+build:
+  image: node:latest   
+  stage: build
+  script:
+    - yarn install     
+    - yarn build
+  artifacts:
+    paths:
+      - build/      
